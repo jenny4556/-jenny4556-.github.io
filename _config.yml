@@ -1,5 +1,5 @@
 title: Klaudia Nurzyńska
 #logo:  reative path for an image
 description: Please feel free to explore my GitHub portfolio. "Used Car Pricing" is an exercise, where I performed data analysis using Python on an online dataset to predict used car prices based on various features. This project showcases my skills in data cleaning, manipulation, and visualization techniques (e.g., histogram, scatterplot, KDE plot), as well as statistical and predictive analysis, including ANOVA, Machine Learning with Multiple Linear Regression and Polynomial models, and model evaluation (R-squared, aka. the coefficient of determination).
-downloaded: True
+show_downloads: True
 theme: jekyll-theme-minimal
