@@ -3,7 +3,7 @@
   
   
 ## Education 
-**University of York, York, United Kingdom**
+**University of York, York, United Kingdom**  
 Bachelor of Engineering - BEng Elecronics Engineering wih Music Technology Systems  
 _Oct 2018 - Aug 2021_  
 Grade: 1st class degree (GPU: 4.0)  
@@ -14,9 +14,9 @@ Grade: 1st class degree (GPU: 4.0)
 **Billing Reporting Analyst (Audit)**  
 _Apr 2024 - Present_  
 _Poznań, Poland_  
-- Developed a web scraper in Python using Selenium to automate audits, comparing data between SQL databases and Excel files related to ordering, ticketing, and billing systems.
+- Developed a web scraper in **Python**  using Selenium to automate audits, comparing data between **SQL** databases and **Excel** files related to ordering, ticketing, and billing systems.
 - Completed audits and checks to identify errors and defects, enhancing data integrity.
-- Utilized Power BI for comprehensive reporting and data visualization.
+- Utilized **Power BI** for comprehensive reporting and data visualization.
 - Traversed SQL databases to extract relevant data for audits.</br>
 - Improved existing billing and audit processes, resulting in increased efficiency.
 - Conducted decomposition on credits and backbills for accurate financial reporting.
@@ -26,7 +26,7 @@ _Poznań, Poland_
 **Off-net quoation analyst 1**  
 _May 2023 - Apr 2024_  
 _Poznań, Poland_  
-- Developed a custom statistical tool in JavaScript to visually break down processed requests from CSV files, improving analysis efficiency.
+- Developed a custom statistical tool in **JavaScript** to visually break down processed requests from CSV files, improving analysis efficiency.
 - Selected quotations that best met project requirements, ensuring optimal pricing and terms.
 - Reviewed orders before submission to local vendors and coordinated quote orders for leased lines across various carriers.
 - Collaborated with the CRMs team to attain vendor standard rates, meeting deadlines for all requests.
@@ -35,7 +35,7 @@ _Poznań, Poland_
 **Junior CRM Analyst**  
 _Poznań, Poland_  
 _Oct 2022 - Apr 2023_  
-- Assisted in building and maintaining cell databases (Salesforce, Access), contributing to overall database optimization.
+- Assisted in building and maintaining cell databases **(Salesforce, Access)**, contributing to overall database optimization.
 - Managed online CRM systems (Vuture, Marketo) to execute email campaigns effectively.
 - Provided customized reports and conducted ad hoc statistical analyses to support strategic initiatives.
 - Managed multiple projects and deadlines with minimal oversight.
