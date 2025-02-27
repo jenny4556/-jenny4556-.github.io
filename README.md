@@ -1,10 +1,10 @@
 ## Data Analyst
-** Highly skilled and analytical Data Analyst with over three years of experience in data reporting, auditing, and analysis. Proven track record of leveraging Python, SQL, and Power BI to develop automated solutions and visualizations that enhance data integrity and optimize business processes. Demonstrated ability to extract, analyze, and interpret complex data sets to drive actionable insights and support strategic decision-making.**
+**Highly skilled and analytical Data Analyst with over three years of experience in data reporting, auditing, and analysis. Proven track record of leveraging Python, SQL, and Power BI to develop automated solutions and visualizations that enhance data integrity and optimize business processes. Demonstrated ability to extract, analyze, and interpret complex data sets to drive actionable insights and support strategic decision-making.**
 
 
 ## Education 
 **University of York, York, United Kingdom**
-Bachelor of Engineering - BEng Elecronics Engineering wih Music Technology Systems
+Bachelor of Engineering - BEng Elecronics Engineering wih Music Technology Systems__
 _Oct 2018 - Aug 2021_
 Grade: 1st class degree (GPU: 4.0)
 
