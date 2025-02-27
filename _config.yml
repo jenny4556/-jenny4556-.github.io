@@ -1,5 +1,5 @@
 title: Klaudia Nurzyńska
 #logo:  reative path for an image
-#description: text below name/logo (if logo present)
+description: Please free to see my portfolio in GitHub. Used Car Pricing exercise is a data analysis done in Python on an online dataset to predict the used car prices based on a number of their features. This exercise highlights data cleaning, manipulation, and visualization techniques (e.g., using a histogram, scatterplot, KDE plot) as well as statistical and predictive analysis including ANOVA, ML with Multiple Linear Regression and Polynomial model, and model evaluation (R-squared, aka. coefficient of determination).
 show_downloads: True
 theme: jekyll-theme-minimal
