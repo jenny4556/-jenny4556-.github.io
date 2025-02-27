@@ -4,7 +4,7 @@
 
 ## Education 
 **University of York, York, United Kingdom**
-Bachelor of Engineering - BEng Elecronics Engineering wih Music Technology Systems__
+Bachelor of Engineering - BEng Elecronics Engineering wih Music Technology Systems  
 _Oct 2018 - Aug 2021_
 Grade: 1st class degree (GPU: 4.0)
 
