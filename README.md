@@ -63,13 +63,18 @@ Skills: Python (Programming Language) · Data Analysis · Data Science · Applic
 ## Skills
 **Data Analysis:**  
 Python (Programming Language), MatLab, SQL, Microsoft Access, Salesforce.com, Microsoft Excel, Pricing Analysis, Snowflake, Research Skills, Performance Metrics, Microsoft Power BI, JSON, NumPy, Pandas (Software), Model Development, Variance Analysis, Pipelines, Regression Analysis, Scikit-Learn, Seaborn, Correlation Analysis, ANOVA, Pivot Tables, Expploratory Data Analysis, Data Cleaning, VBA  
+  
 **Programming:**  
-Python (Programming Language), C, VHDL, Selenium, JavaScript, Swift  
+Python (Programming Language), C, VHDL, Selenium, JavaScript, Swift 
+  
 **Technical Skills:**  
 Telecommunications Systems, Technology Research, Web Scraping  
+  
 **Financial Skills:**  
 Invocie Processing, Budgeting, Billing Systems, Reporting & Analysis  
+  
 **Soft Skills:**  
 Problem Solving, Communication, Supplier Negotiation  
+  
 **Languages:**  
 Polish (native), English (C2)  
