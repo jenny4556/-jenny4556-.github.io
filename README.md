@@ -49,6 +49,10 @@ _Jul 2021 - Oct 2022_
 - Organized and scheduled international meetings across multiple time zones while providing broad administrative support.
 - Planned and organized travel arrangements while managing confidential data.
 
+## Projects
+An example of data visualization (an area graph) representing annual immigration rates to Cnada from 10 counties with the highest cumulative rates over the period between 1980 and 2013.  
+_(Can be reproduced via a function included in the "visualization exercise" available in the GitHub portfolio)_  
+![Immigration Visualization](assets/ImmigrationVisualization.png)
   
 ## Licenses & Certifications
 **Data Analysis with Python from _IBM_**  
