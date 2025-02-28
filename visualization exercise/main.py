@@ -8,7 +8,6 @@ def plotImigrationsOverYeas():
     df.sort_values(['Total'], ascending=False, axis=0, inplace=True)
     top10 = df.drop(df[df["Country"] == "Total"].index, axis=0, inplace=True)
     top10 = df['Country'].head(10)
-    print(top10)
     years = list(map(int, range(1980, 2014))) 
     df_selected = df[df["Country"].isin(top10)][["Country"] + years].set_index("Country")
 
@@ -24,6 +23,7 @@ def plotImigrationsOverYeas():
     plt.legend(loc="upper left")
     plt.grid(True)
     plt.show()
+
 
 def plotImigrationFromACountry(country):
     #a func that takes a country name as a string and plots the distribution of imigration rates to Canada from theat country over years 1980-2013
@@ -66,7 +66,11 @@ yearsCols = df.iloc[:, 4:33]
 df['Total'] = yearsCols.sum(axis=1)
 #plotImigrationFromACountry('aaa')
 
-plotImigrationsOverYeas()
+#plotImigrationsOverYeas()
+
+count, bin_edges = np.histogram(df[2013])
+df[2013].plot(kind='hist', figsize=(8, 5), xticks=bin_edges)
+plt.show()
 
 
 
