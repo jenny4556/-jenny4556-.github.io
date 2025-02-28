@@ -50,6 +50,7 @@ _Jul 2021 - Oct 2022_
 - Planned and organized travel arrangements while managing confidential data.
 
 ## Projects
+An example of data visualization (an area graph) representing annual immigration rates to Cnada from 10 counties with the highest cumulative rates over the period between 1980 and 2013.
 ![Immigration Visualization](assets/ImmigrationVisualization.png)
   
 ## Licenses & Certifications
