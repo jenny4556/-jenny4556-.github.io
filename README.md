@@ -50,7 +50,7 @@ _Jul 2021 - Oct 2022_
 - Planned and organized travel arrangements while managing confidential data.
 
 ## Projects
-![Immigration Visualization](/assets/img/ImmigrationVisualization.png)
+![Immigration Visualization](assets/ImmigrationVisualization.png)
   
 ## Licenses & Certifications
 **Data Analysis with Python from _IBM_**  
