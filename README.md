@@ -50,7 +50,7 @@ _Jul 2021 - Oct 2022_
 - Planned and organized travel arrangements while managing confidential data.
 
 ## Projects
-![Bike Study](https://github.com/jenny4556/-jenny4556-.github.io/blob/main/assets/ImmigrationVisualization.png)
+![Immigration Visualization](/assets/ImmigrationVisualization.png)
   
 ## Licenses & Certifications
 **Data Analysis with Python from _IBM_**  
