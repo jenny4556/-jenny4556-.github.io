@@ -3,12 +3,60 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-def plotImigrationsOverYeas():
-    #create a list of highest immigration rates to Canada over 1980-2014
+def plotDevelopingVsDeveloped(df_developing, df_developed):
+    #a func plotting the results found in the func indDevelopingOrDevelop
+    _, ax = plt.subplots(figsize = (8,8))
+    df_developing.plot.bar()
+    df_developed.plot.bar(color='red')
+    ax.grid(True)
+    labels = ['Developing countries', 'Developed countries']
+    ax.legend(labels=labels)
+    plt.xlabel('Years')
+    plt.ylabel('Immigration rates')
+    plt.title('Imigration rates to Canada from developed vs developing countries')
+    plt.show()
+
+
+def findDevelopingOrDeveloped(years, categoryName):
+    #a func finding a cumulative immigration rates to Canada for either Developing or Developed countries, returning a dataframe with said cumulative
+    #results (against the period of interests)
+    #takes in as args the list of the period of columns specifying the period of interest and a string determining whether to look for Developing
+    #or Developed countries
+    df_dev = df[df["DevName"] == categoryName]
+    df_dev.drop(columns={'Continent', 'Region', 'DevName', 'Total'}, axis=1, inplace=True)
+    df_dev.index = df_dev.iloc[:, 0]
+    df_dev.rename(columns={'Country': '0'}, inplace=True)
+
+    df_dev = df_dev.T
+    df_dev['Total-dev'] = df_dev.sum(axis=1)
+    df_dev.index = df_dev.index.astype(int)
+    df_dev = df_dev.loc[years, 'Total-dev']
+
+    return df_dev
+
+
+def plotCumulativeImmigrationRates(years):
+    #a func creating a bar chart showing cumulative immigration rates to Canada over years, taking in a list of columns specifying the period of
+    #interest
+    df_selected = df.drop(columns={'Continent', 'Region', 'DevName'}, axis=1)
+    df_selected.index = df_selected.iloc[:, 0]
+    df_selected.rename(columns= {'Country': '0', 'Total': '1'}, inplace = True)
+    df_selected = df_selected.T
+    df_selected.index = df_selected.index.astype(int)
+    df_total = df_selected.loc[years, 'Total']
+
+    df_total.plot(kind='bar')
+    plt.xlabel('Years')
+    plt.ylabel('Cumulative immigration rates to Canada')
+    plt.show()
+
+
+def plotImigrationsOverYeas(years):
+    #a func creating an area plot of 10 countries with highest immigration rates to Canada over 1980-2014, taking in a list of columns specyfing 
+    #the period of interest
     df.sort_values(['Total'], ascending=False, axis=0, inplace=True)
     top10 = df.drop(df[df["Country"] == "Total"].index, axis=0, inplace=True)
     top10 = df['Country'].head(10)
-    years = list(map(int, range(1980, 2014))) 
     df_selected = df[df["Country"].isin(top10)][["Country"] + years].set_index("Country")
 
     # Transpose the data for plotting
@@ -64,13 +112,20 @@ with warnings.catch_warnings():
 #add a column with cumulative number of imigrants to Canada over the period of 1980-2013
 yearsCols = df.iloc[:, 4:33]
 df['Total'] = yearsCols.sum(axis=1)
+
+years = list(map(int, range(1980, 2014))) 
+
 #plotImigrationFromACountry('aaa')
+#plotImigrationsOverYeas(years)
+#plotCumulativeImmigrationRates(years)
 
-#plotImigrationsOverYeas()
+#TO-DO: create a bar chart for the last 5 years to show the cumulative immigration rates for developed and underdeveloped countries
+df_developed = findDevelopingOrDeveloped(years, 'Developed regions')
+df_developing = findDevelopingOrDeveloped(years, 'Developing regions')
+plotDevelopingVsDeveloped(df_developing, df_developed)
 
-count, bin_edges = np.histogram(df[2013])
-df[2013].plot(kind='hist', figsize=(8, 5), xticks=bin_edges)
-plt.show()
+
+#TO-DO: create the bar chart as per labs
 
 
 
