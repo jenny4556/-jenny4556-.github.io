@@ -3,6 +3,22 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+def plotPieChartForContinents():
+    df_continents = df.groupby('Continent', axis=0).sum()
+    print(df_continents.index)
+    print(df_continents)
+    df_continents.drop('World', inplace=True)
+    colors_list = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue', 'lightgreen', 'pink']
+    explode_list = [0.1, 0, 0, 0, 0.1, 0.1] # ratio for each continent with which to offset each wedge.
+
+    df_continents['Total'].plot(kind='pie', autopct='%1.1f%%', startangle=90, shadow=True, labels=None, pctdistance=1.12,    
+    colors=colors_list, explode=explode_list)
+
+    plt.axis('equal') # Sets the pie chart to look like a circle.
+    plt.legend(labels=df_continents.index, loc='upper left') 
+    plt.show()
+
+
 def plotDevelopingVsDeveloped(df_developing, df_developed):
     #a func plotting the results found in the func indDevelopingOrDevelop
     _, ax = plt.subplots(figsize = (8,8))
@@ -119,13 +135,11 @@ years = list(map(int, range(1980, 2014)))
 #plotImigrationsOverYeas(years)
 #plotCumulativeImmigrationRates(years)
 
-#TO-DO: create a bar chart for the last 5 years to show the cumulative immigration rates for developed and underdeveloped countries
-df_developed = findDevelopingOrDeveloped(years, 'Developed regions')
-df_developing = findDevelopingOrDeveloped(years, 'Developing regions')
-plotDevelopingVsDeveloped(df_developing, df_developed)
+#df_developed = findDevelopingOrDeveloped(years, 'Developed regions')
+#df_developing = findDevelopingOrDeveloped(years, 'Developing regions')
+#plotDevelopingVsDeveloped(df_developing, df_developed)
+plotPieChartForContinents()
 
-
-#TO-DO: create the bar chart as per labs
 
 
 
