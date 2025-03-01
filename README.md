@@ -1,7 +1,14 @@
 ## Data Analyst
 **Highly skilled and analytical Data Analyst with over three years of experience in data reporting, auditing, and analysis. Proven track record of leveraging Python, SQL, and Power BI to develop automated solutions and visualizations that enhance data integrity and optimize business processes. Demonstrated ability to extract, analyze, and interpret complex data sets to drive actionable insights and support strategic decision-making.**
   
+## Projects
+_Graphics taken from the "visualization exercise" available in the GitHub portfolio_  
+An example of data visualization (an area graph) representing annual immigration rates to Canada from 10 countries with the highest cumulative rates over the period between 1980 and 2013.  
+[![Immigration Visualization](assets/ImmigrationVisualization.png)](assets/ImmigrationVisualization.png)
   
+A bar graph representing annual immigration rates to Canada from Developing vs Developed countries over the period of 1980 - 2013.
+[![Immigration Visualization](assets/DevelopedVsDeveloping.png)](assets/DevelopedVsDeveloping.png)
+   
 ## Education 
 **University of York, York, United Kingdom**  
 Bachelor of Engineering - BEng Elecronics Engineering wih Music Technology Systems  
@@ -48,11 +55,6 @@ _Jul 2021 - Oct 2022_
 - Handled complex, sensitive, time-critical tasks and quickly acclimated to unfamiliar topics.
 - Organized and scheduled international meetings across multiple time zones while providing broad administrative support.
 - Planned and organized travel arrangements while managing confidential data.
-
-## Projects
-An example of data visualization (an area graph) representing annual immigration rates to Cnada from 10 counties with the highest cumulative rates over the period between 1980 and 2013.  
-_(Can be reproduced via a function included in the "visualization exercise" available in the GitHub portfolio)_  
-![Immigration Visualization](assets/ImmigrationVisualization.png)
   
 ## Licenses & Certifications
 **Data Analysis with Python from _IBM_**  
