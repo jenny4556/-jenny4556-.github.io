@@ -6,6 +6,9 @@ An example of data visualization (an area graph) representing annual immigration
 _(Can be reproduced via a function included in the "visualization exercise" available in the GitHub portfolio)_  
 [![Immigration Visualization](assets/ImmigrationVisualization.png)](assets/ImmigrationVisualization.png)
   
+A bar graph representing annual immigration rates to Canada from Developing vs Developed countries over the period of 1980 - 2013.
+[![Immigration Visualization](assets/DevelopedVsDeveloping.png)](assets/DevelopedVsDeveloping.png)
+   
 ## Education 
 **University of York, York, United Kingdom**  
 Bachelor of Engineering - BEng Elecronics Engineering wih Music Technology Systems  
