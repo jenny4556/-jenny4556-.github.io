@@ -10,7 +10,6 @@ A map of 100 crimes scenes in San Francisco from 2016, visualized using Folium, 
 _Map available [here.](assets/immigrationMap.html)_  
 A worold map created using Folium, highlighting in colour countries with the highest immigration rates to Canada.    
   
-_Graphics available [here.](main/visualization exercise)_  
 An area graph representing annual immigration rates to Canada from 10 countries with the highest cumulative rates over the period 1980 - 2013.  
 [![Immigration Visualization](assets/ImmigrationVisualization.png)](assets/ImmigrationVisualization.png)
   
