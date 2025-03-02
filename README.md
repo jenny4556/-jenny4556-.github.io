@@ -6,14 +6,14 @@
 _Map available [here.](foliumExercies/SanFran.html)_   
 A map of 100 crimes scenes in San Francisco from 2016, visualized using Folium, grouped into clusters for clarity. The crime data is available [here.](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0101EN-SkillsNetwork/Data%20Files/Police_Department_Incidents_-_Previous_Year__2016_.csv)  
 
-[**Canada immigration rates (1980-2013) visualization (Python)**](visualization exercise)  
+[**Canada immigration rates (1980-2013) visualizations (Python)**](visualization exercise)  
 _Map available [here.](assets/immigrationMap.html)_  
 A worold map created using Folium, highlighting in colour countries with the highest immigration rates to Canada.    
   
-An area graph representing annual immigration rates to Canada from 10 countries with the highest cumulative rates over the period 1980 - 2013.  
+An area graph representing annual immigration rates to Canada from 10 countries with the highest cumulative rates over the period 1980-2013.  
 [![Immigration Visualization](assets/ImmigrationVisualization.png)](assets/ImmigrationVisualization.png)
   
-A bar graph representing annual immigration rates to Canada from Developing vs Developed countries over the period of 1980 - 2013.
+A bar graph representing annual immigration rates to Canada from Developing vs Developed countries over the period of 1980-2013.
 [![Immigration Visualization](assets/DevelopedVsDeveloping.png)](assets/DevelopedVsDeveloping.png)  
 
 A bubble chart representing immigration rates to Canada from Brazil and Argentina. The purpose of this visualization was to assess Argentina's great depression (1998-2002) impact on the immigration rates and compare them with their neighbour's, Brazil, rates as a "benchmark".
