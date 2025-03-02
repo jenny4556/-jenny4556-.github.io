@@ -6,7 +6,7 @@
 _Map available [here.](foliumExercies/SanFran.html)_   
 A map of 100 crimes scenes in San Francisco from 2016, visualized using Folium, grouped into clusters for clarity. The crime data is available [here.](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0101EN-SkillsNetwork/Data%20Files/Police_Department_Incidents_-_Previous_Year__2016_.csv)  
 
-**Canada immigration rates (1980-2013) visualization (Python)**  
+[**Canada immigration rates (1980-2013) visualization (Python)**](visualization exercise)  
 _Map available [here.](assets/immigrationMap.html)_  
 A worold map created using Folium, highlighting in colour countries with the highest immigration rates to Canada.    
   
