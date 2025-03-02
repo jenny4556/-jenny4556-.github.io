@@ -4,6 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import folium
+import requests
+import json
 
 def bubbleChartforBrazilAndArgentina():
     #a func to create bubble charts on the same canvas for both Argentina and Brazil - the purpose it to assess the impact of Argentina's great
@@ -275,4 +277,49 @@ years = list(map(int, range(1980, 2014)))
 #waffleChatForScandinavian()
 #bubbleChartforBrazilAndArgentina()
 
+URL = 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0101EN-SkillsNetwork/Data%20Files/world_countries.json'
 
+response = requests.get(URL)
+# Ensure the request was successful
+if response.status_code == 200:
+    world_geo = response.json()  # Convert response to Python dictionary
+else:
+    print(f"Failed to fetch data. HTTP Status Code: {response.status_code}")
+
+
+world_map = folium.Map(location=[0, 0], zoom_start=2)
+df.drop(df[df["Country"] == "Total"].index, axis=0, inplace=True)
+df.drop(df[df["Country"] == "Unknown"].index, axis=0, inplace=True)
+
+df_countries = df['Country']
+
+#df_json = world_geo['features'][:]['properties']['name']
+
+df_json = []
+for i in range(len(world_geo['features'])):
+    df_json.append(world_geo['features'][i]['properties']['name'])
+
+filtered = df_countries.isin(df_json)
+
+notInJason = []
+for i in range(1, len(filtered)):
+    if filtered[i] == False:
+        notInJason.append(df_countries.iloc[i])
+
+#TO-DO: replace country names that don't match between df['County'] and JSON
+
+folium.Choropleth(
+    geo_data=world_geo,  # GeoJSON data
+    name="choropleth",
+    data=df,  # Example data
+    columns=["Country", "Total"],  # This should match your actual data structure
+    key_on="feature.properties.name",  # Ensure it matches GeoJSON structure
+    fill_color="YlOrRd",
+    fill_opacity=0.7,
+    line_opacity=0.2,
+    legend_name="Immigration to Canada"
+).add_to(world_map)
+
+folium.LayerControl().add_to(world_map)
+
+world_map.show_in_browser()
