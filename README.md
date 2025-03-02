@@ -2,11 +2,11 @@
 **Highly skilled and analytical Data Analyst with over three years of experience in data reporting, auditing, and analysis. Proven track record of leveraging Python, SQL, and Power BI to develop automated solutions and visualizations that enhance data integrity and optimize business processes. Demonstrated ability to extract, analyze, and interpret complex data sets to drive actionable insights and support strategic decision-making.**
   
 ## Projects
-**Visualizing crime scenes in San Francisco using Folium (Python)**
+**Visualizing crime scenes in San Francisco using Folium (Python)**  
 _Map available [here.](foliumExercies/SanFran.html)_   
 A map of 100 crimes scenes in San Francisco from 2016, visualized using Folium, grouped into clusters for clarity. The crime data is available [here.](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0101EN-SkillsNetwork/Data%20Files/Police_Department_Incidents_-_Previous_Year__2016_.csv)  
 
-**Canada immigration rates (1980-2013) visualization (Python)**
+**Canada immigration rates (1980-2013) visualization (Python)**  
 _Map available [here.](assets/immigrationMap.html)_  
 A worold map created using Folium, highlighting in colour countries with the highest immigration rates to Canada.    
   
