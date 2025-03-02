@@ -3,7 +3,7 @@
   
 ## Projects
 _Map available [here.](foliumExercies/SanFran.html)_   
-A map of places of 100 crimes comitted in San Francisco in 2016 visualized using Folium, grouped into clusters for clarity. The crime data is available [here.](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0101EN-SkillsNetwork/Data%20Files/Police_Department_Incidents_-_Previous_Year__2016_.csv)  
+A map of 100 crimes scenes in San Francisco from 2016, visualized using Folium, grouped into clusters for clarity. The crime data is available [here.](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DV0101EN-SkillsNetwork/Data%20Files/Police_Department_Incidents_-_Previous_Year__2016_.csv)  
   
 _Graphics available [here.](main/visualization exercise)_  
 An example of data visualization (an area graph) representing annual immigration rates to Canada from 10 countries with the highest cumulative rates over the period between 1980 and 2013.  
