@@ -2,11 +2,143 @@ import warnings
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+
+def bubbleChartforBrazilAndArgentina():
+    #a func to create bubble charts on the same canvas for both Argentina and Brazil - the purpose it to assess the impact of Argentina's great
+    #depression impact (1998-2002) on the immigration rates to Canada. This is being compared to the Argentina's neighbour, Brazil, to see if the
+    #plot can indicate a difference between these 2 rates
+    df1 = df[years].T
+    df1.columns = df.iloc[:, 0]
+    df1.index = map(int, df1.index) #cast years index to int
+    df1.index.name = 'Year' #label the index
+    df1.reset_index(inplace=True) # reset index to bring the Year in as a column - index back to 0, 1, 2...
+    print(df1.head())
+
+    #normalizing weights, using the mix-max approach
+    norm_brazil = (df1['Brazil'] - df1['Brazil'].min()) / (df1['Brazil'].max() - df1['Brazil'].min())
+    norm_argentina = (df1['Argentina'] - df1['Argentina'].min()) / (df1['Argentina'].max() - df1['Argentina'].min())
+
+    # Brazil
+    ax0 = df1.plot(kind='scatter',
+                        x='Year',
+                        y='Brazil',
+                        figsize=(8, 8),
+                        alpha=0.5,  # transparency
+                        color='green',
+                        s=norm_brazil * 2000 + 10,  # pass in weights 
+                        xlim=(1975, 2015)
+                        )
+
+    # Argentina
+    ax1 = df1.plot(kind='scatter',
+                        x='Year',
+                        y='Argentina',
+                        alpha=0.5,
+                        color="blue",
+                        s=norm_argentina * 2000 + 10,
+                        ax=ax0
+                        )
+
+    ax0.set_ylabel('Number of Immigrants')
+    ax0.set_title('Immigration from Brazil and Argentina from 1980 to 2013')
+    ax0.legend(['Brazil', 'Argentina'], loc='upper left', fontsize='x-large')
+    plt.show()
+
+
+def createWaffleChart(categories, values, height, width, colormap, value_sign=''):
+    # compute the proportion of each category with respect to the total
+    total_values = sum(values)
+    category_proportions = [(float(value) / total_values) for value in values]
+
+    # compute the total number of tiles
+    total_num_tiles = width * height # total number of tiles
+    
+    # compute the number of tiles for each catagory
+    tiles_per_category = [round(proportion * total_num_tiles) for proportion in category_proportions]
+    
+    # initialize the waffle chart as an empty matrix
+    waffle_chart = np.zeros((height, width))
+
+    # define indices to loop through waffle chart
+    category_index = 0
+    tile_index = 0
+
+    # populate the waffle chart
+    for col in range(width):
+        for row in range(height):
+            tile_index += 1
+
+            # if the number of tiles populated for the current category 
+            # is equal to its corresponding allocated tiles...
+            if tile_index > sum(tiles_per_category[0:category_index]):
+                # ...proceed to the next category
+                category_index += 1       
+            
+            # set the class value to an integer, which increases with class
+            waffle_chart[row, col] = category_index
+
+    # use matshow to display the waffle chart
+    colormap = plt.cm.coolwarm
+    plt.matshow(waffle_chart, cmap=colormap)
+    plt.colorbar()
+
+    # get the axis
+    ax = plt.gca()
+
+    # set minor ticks
+    ax.set_xticks(np.arange(-.5, (width), 1), minor=True)
+    ax.set_yticks(np.arange(-.5, (height), 1), minor=True)
+    
+    # add dridlines based on minor ticks
+    ax.grid(which='minor', color='w', linestyle='-', linewidth=2)
+
+    plt.xticks([])
+    plt.yticks([])
+
+    # compute cumulative sum of individual categories to match color schemes between chart and legend
+    values_cumsum = np.cumsum(values)
+    total_values = values_cumsum[len(values_cumsum) - 1]
+
+    # create legend
+    legend_handles = []
+    for i, category in enumerate(categories):
+        if value_sign == '%':
+            label_str = category + ' (' + str(values[i]) + value_sign + ')'
+        else:
+            label_str = category + ' (' + value_sign + str(values[i]) + ')'
+            
+        color_val = colormap(float(values_cumsum[i])/total_values)
+        legend_handles.append(mpatches.Patch(color=color_val, label=label_str))
+
+    # add legend to chart
+    plt.legend(
+        handles=legend_handles,
+        loc='lower center', 
+        ncol=len(categories),
+        bbox_to_anchor=(0., -0.2, 0.95, .1)
+    )
+    plt.show()
+
+
+def waffleChatForScandinavian():
+    #a func creating a waffle chart for Scandinavian immigration rates to Canada, showing the proportion of immigration rates from Denmark, Norawy,
+    #and Sweden in the total Scandinavian immigration rates
+    df.index = df.iloc[:, 0]
+    df_dsn = df.loc[['Denmark', 'Norway', 'Sweden'], :]
+    # compute the proportion of each category with respect to the total
+    total_values = df_dsn['Total'].sum()
+    category_proportions = df_dsn['Total'] / total_values
+
+    # print out proportions
+    pd.DataFrame({"Category Proportion": category_proportions})
+
+    createWaffleChart(df_dsn.index.values, df_dsn['Total'], 10, 40, plt.cm.coolwarm)
+
 
 def plotPieChartForContinents():
+    #a func producing a pie chart representing immigration rates to Canada by continents
     df_continents = df.groupby('Continent', axis=0).sum()
-    print(df_continents.index)
-    print(df_continents)
     df_continents.drop('World', inplace=True)
     colors_list = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue', 'lightgreen', 'pink']
     explode_list = [0.1, 0, 0, 0, 0.1, 0.1] # ratio for each continent with which to offset each wedge.
@@ -14,6 +146,7 @@ def plotPieChartForContinents():
     df_continents['Total'].plot(kind='pie', autopct='%1.1f%%', startangle=90, shadow=True, labels=None, pctdistance=1.12,    
     colors=colors_list, explode=explode_list)
 
+    plt.title('Immigration to Canada by Continent [1980 - 2013]', y=1.12) 
     plt.axis('equal') # Sets the pie chart to look like a circle.
     plt.legend(labels=df_continents.index, loc='upper left') 
     plt.show()
@@ -138,16 +271,8 @@ years = list(map(int, range(1980, 2014)))
 #df_developed = findDevelopingOrDeveloped(years, 'Developed regions')
 #df_developing = findDevelopingOrDeveloped(years, 'Developing regions')
 #plotDevelopingVsDeveloped(df_developing, df_developed)
-plotPieChartForContinents()
-
-
-
-
-
-
-
-
-
-
+#plotPieChartForContinents()
+#waffleChatForScandinavian()
+bubbleChartforBrazilAndArgentina()
 
 
