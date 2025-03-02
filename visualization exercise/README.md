@@ -26,7 +26,8 @@ python script.py
 
 ### Output
 
-- The script processes data from a CSV file and generates visualizations.
+- The script processes data from the Excel file (find in repo) and generates visualizations.
+- Generated visualizations represent immigration rates to Canada over the period of 1980-2013.
 - Output graphs are displayed in a pop-up window.
 - If configured, graphs may be saved as image files in the output directory.
 
