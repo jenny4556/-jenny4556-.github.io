@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+import folium
 
 def bubbleChartforBrazilAndArgentina():
     #a func to create bubble charts on the same canvas for both Argentina and Brazil - the purpose it to assess the impact of Argentina's great
@@ -13,7 +14,6 @@ def bubbleChartforBrazilAndArgentina():
     df1.index = map(int, df1.index) #cast years index to int
     df1.index.name = 'Year' #label the index
     df1.reset_index(inplace=True) # reset index to bring the Year in as a column - index back to 0, 1, 2...
-    print(df1.head())
 
     #normalizing weights, using the mix-max approach
     norm_brazil = (df1['Brazil'] - df1['Brazil'].min()) / (df1['Brazil'].max() - df1['Brazil'].min())
@@ -273,6 +273,6 @@ years = list(map(int, range(1980, 2014)))
 #plotDevelopingVsDeveloped(df_developing, df_developed)
 #plotPieChartForContinents()
 #waffleChatForScandinavian()
-bubbleChartforBrazilAndArgentina()
+#bubbleChartforBrazilAndArgentina()
 
 
