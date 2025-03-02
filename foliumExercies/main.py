@@ -32,4 +32,4 @@ for lat, lng, label, in zip(df_incidents.Y, df_incidents.X, df_incidents.Categor
         popup=label,
     ).add_to(incidents)
 
-SanFran_map.show_in_browser()
+SanFran_map.save('SanFran.html')
