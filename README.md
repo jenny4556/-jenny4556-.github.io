@@ -9,7 +9,7 @@ An example of data visualization (an area graph) representing annual immigration
 A bar graph representing annual immigration rates to Canada from Developing vs Developed countries over the period of 1980 - 2013.
 [![Immigration Visualization](assets/DevelopedVsDeveloping.png)](assets/DevelopedVsDeveloping.png)  
 
-A bubble chart representing immigration rates to Canada from Brazil and Argentina. The purpose of this visualization was to assess Argentina's great depression impact (1998-2002) on the immigration rates and compare them with their neighbour's, Brazil, rates as a "benchmark".
+A bubble chart representing immigration rates to Canada from Brazil and Argentina. The purpose of this visualization was to assess Argentina's great depression (1998-2002) impact  on the immigration rates and compare them with their neighbour's, Brazil, rates as a "benchmark".
 [![Immigration_Visialization](assets/BubblrBrazilAndArgentina.png)](assets/BubblrBrazilAndArgentina.png)  
    
 ## Education 
