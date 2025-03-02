@@ -2,7 +2,7 @@
 **Highly skilled and analytical Data Analyst with over three years of experience in data reporting, auditing, and analysis. Proven track record of leveraging Python, SQL, and Power BI to develop automated solutions and visualizations that enhance data integrity and optimize business processes. Demonstrated ability to extract, analyze, and interpret complex data sets to drive actionable insights and support strategic decision-making.**
   
 ## Projects
-_Graphics available GitHub [!here](main/visualization exercise)_  
+_Graphics available GitHub [here.](main/visualization exercise)_  
 An example of data visualization (an area graph) representing annual immigration rates to Canada from 10 countries with the highest cumulative rates over the period between 1980 and 2013.  
 [![Immigration Visualization](assets/ImmigrationVisualization.png)](assets/ImmigrationVisualization.png)
   
